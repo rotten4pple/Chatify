@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServerNotification.h"
 
 @interface ChatViewController : UIViewController <ChatifyDelegate>
 
