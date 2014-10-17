@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *StartButton;
 @property (strong, nonatomic) IBOutlet UILabel *UserOnlineLabel;
 @property (strong, nonatomic) IBOutlet UILabel *serverOnlineLabel;
+@property (strong, nonatomic) NSString *trimmedNameString;
+
 
 - (IBAction)StartButtonTapped:(id)sender;
 - (IBAction)NameValueChanged:(id)sender;

@@ -12,6 +12,7 @@
 
 @protocol ChatifyDelegate <NSObject>
 @optional
+- (void) receivedUserNameTaken:(BOOL)omisFree;
 - (void) receivedUserOnlineTotal:(NSString*)message;
 - (void) receivedError:(NSError*)error;
 - (void) gotConnection;

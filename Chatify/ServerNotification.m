@@ -55,7 +55,6 @@
                 if ([_delegateChatify respondsToSelector:@selector(receivedUserOnlineTotal:)]) {
                     [_delegateChatify receivedUserOnlineTotal: message];
                 }
-                //_UserOnlineLabel.text = [NSString stringWithFormat: @"%@ user online", message];
             } else if ([type isEqualToString:@"user_connected"]) {
                 
             } else if ([type isEqualToString:@"user_created"]) {
@@ -68,6 +67,10 @@
                 
             } else if ([type isEqualToString:@"user_name_check"]) {
                 NSLog(@"%@", type);
+                if ([self.delegateChatify respondsToSelector:@selector(receivedUserNameTaken:)]) {
+                    BOOL isFree = [message boolValue];
+                    [self.delegateChatify receivedUserNameTaken:isFree];
+                }
             } else {
                 NSLog(@"Unknown Type in system message: %@", type);
             }

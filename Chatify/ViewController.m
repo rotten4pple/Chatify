@@ -43,11 +43,29 @@
     _UserOnlineLabel.text = [NSString stringWithFormat:@"%@ user online", message];
 }
 
+- (void)receivedUserNameTaken:(BOOL)isFree {
+    if (isFree) {
+        self.StartButton.enabled = true;
+    } else {
+        self.StartButton.enabled = false;
+    }
+}
+
+#pragma mark Accessors
+
+- (NSString *)trimmedNameString {
+    return [self.NameLabel.text stringByTrimmingCharactersInSet:
+            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark Actions
 
 - (IBAction)StartButtonTapped:(id)sender {
     UIStoryboard *storyboard = self.storyboard;
@@ -61,14 +79,14 @@
 
 
 - (IBAction)NameValueChanged:(id)sender {
-    NSLog(@"%@", _NameLabel.text);
+    NSLog(@"Trimmed Name: %@", self.trimmedNameString);
     
 }
 
 - (IBAction)NameEditingChanged:(id)sender {
     if (_NameLabel.text.length > 0) {
         NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
-        [data setValue:_NameLabel.text forKey:@"nickname"];
+        [data setValue:self.trimmedNameString forKey:@"nickname"];
         [_noti1.socketIO sendEvent:@"user_name_check" withData:data];
         _StartButton.enabled = true;
     }
