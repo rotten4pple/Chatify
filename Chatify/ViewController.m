@@ -59,6 +59,7 @@
     // TODO check if it works
 }
 
+
 - (IBAction)NameValueChanged:(id)sender {
     NSLog(@"%@", _NameLabel.text);
     
@@ -74,10 +75,6 @@
     else {
         _StartButton.enabled = false;
     }
-}
-
-- (IBAction)DisconnectButtonTapped:(id)sender {
-    NSLog(@"Disconnected");
 }
 
 @end
