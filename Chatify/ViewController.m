@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #include <CommonCrypto/CommonDigest.h>
 #import "SHA1.h"
-#import "ChatViewController.h"
+#import "ChatNavigationController.h"
 #import "ServerNotification.h"
 
 @implementation ViewController
@@ -69,11 +69,11 @@
 
 - (IBAction)StartButtonTapped:(id)sender {
     UIStoryboard *storyboard = self.storyboard;
-    ChatViewController *cvc = [storyboard instantiateViewControllerWithIdentifier:@"ChatViewController"];
-    _noti1.delegateChatify = cvc;
-    cvc.notification = _noti1;
+    ChatNavigationController *chatNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"ChatNavigationController"];
+    _noti1.delegateChatify = nil;
+    //cvc.notification = _noti1;
     //ChatViewController *cvc = [[ChatViewController alloc] init];
-    [self presentViewController:cvc animated:true completion:nil];
+    [self presentViewController:chatNavigationController animated:true completion:nil];
     // TODO check if it works
 }
 

@@ -23,6 +23,7 @@
 		6C281CB019DD6A6C00757A05 /* SHA384.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C281CA719DD6A6C00757A05 /* SHA384.m */; };
 		6C281CB119DD6A6C00757A05 /* SHA512.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C281CA919DD6A6C00757A05 /* SHA512.m */; };
 		6C281CBB19DD844500757A05 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C281CBA19DD844500757A05 /* ChatViewController.m */; };
+		6C33111A19F185D9002C78BC /* ChatNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C33111919F185D9002C78BC /* ChatNavigationController.m */; };
 		6CB93C5A19E816B600F44623 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB93C5919E816B600F44623 /* SRWebSocket.m */; };
 		6CB93C5C19E81AAC00F44623 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB93C5B19E81AAC00F44623 /* Security.framework */; };
 		6CB93C5E19E81AB600F44623 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB93C5D19E81AB600F44623 /* Foundation.framework */; };
@@ -79,6 +80,8 @@
 		6C281CA919DD6A6C00757A05 /* SHA512.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHA512.m; sourceTree = "<group>"; };
 		6C281CB919DD844500757A05 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
 		6C281CBA19DD844500757A05 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		6C33111819F185D9002C78BC /* ChatNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatNavigationController.h; sourceTree = "<group>"; };
+		6C33111919F185D9002C78BC /* ChatNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatNavigationController.m; sourceTree = "<group>"; };
 		6CB93C5819E816B600F44623 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		6CB93C5919E816B600F44623 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		6CB93C5B19E81AAC00F44623 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -162,6 +165,8 @@
 				6C281C7019DD610500757A05 /* Supporting Files */,
 				6CC0362A19E988FC00E5F29B /* ServerNotification.h */,
 				6CC0362B19E988FC00E5F29B /* ServerNotification.m */,
+				6C33111819F185D9002C78BC /* ChatNavigationController.h */,
+				6C33111919F185D9002C78BC /* ChatNavigationController.m */,
 			);
 			path = Chatify;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C281C7919DD610500757A05 /* ViewController.m in Sources */,
+				6C33111A19F185D9002C78BC /* ChatNavigationController.m in Sources */,
 				6C281CAF19DD6A6C00757A05 /* SHA256.m in Sources */,
 				6CB93C6F19E8288A00F44623 /* SocketIOJSONSerialization.m in Sources */,
 				6C281CBB19DD844500757A05 /* ChatViewController.m in Sources */,

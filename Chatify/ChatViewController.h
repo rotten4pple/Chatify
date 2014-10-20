@@ -14,6 +14,14 @@
 @property (strong) ServerNotification *notification;
 @property (strong, nonatomic) IBOutlet UILabel *TitleLabel;
 @property (strong, nonatomic) IBOutlet UIView *AdditionalView;
+@property (strong, nonatomic) IBOutlet UIView *messageInputView;
+@property (strong, nonatomic) IBOutlet UIView *messageView;
+@property (strong, nonatomic) IBOutlet UIView *greenField;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *chatBarLayoutConstraint;
+
+
+
+
 - (IBAction)CloseTapped:(id)sender;
 
 @end
